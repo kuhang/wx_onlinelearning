@@ -1,0 +1,191 @@
+/* 视频播放页面*/
+.course-video {
+  width: 100%;
+  height: 442rpx;
+}
+.video-img{
+  width: 100%;
+  height: 442rpx;
+}
+/*课程基本信息*/
+.course-detail {
+  background-color: #ffffff;
+}
+
+.v1 {
+  display: flex;
+}
+
+.v-icon {
+  height: 90rpx;
+  width: 35%;
+  align-items: center;
+  display: flex;
+  margin: 0 12rpx 0 16rpx;
+}
+
+.v-img1 {
+  width: 45rpx;
+  height: 45rpx;
+}
+
+.liketext {
+  width: 88rpx;
+}
+
+.v-icon text {
+  font-size: 28rpx;
+  padding-left: 10rpx;
+}
+
+.btn {
+  width: 120rpx;
+  height: 46rpx;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  font-size: 28rpx;
+  margin: 0;
+  padding: 0;
+  top: 0;
+  left: 0;
+ 
+  background-color: #fff;
+}
+.hover_btn{
+  background:#D3D3D3;
+}
+
+button::after {
+  border: none;
+}
+
+.btnImg {
+  width: 34rpx;
+  height: 34rpx;
+}
+
+.btnText {
+  padding-left: 10rpx;
+}
+
+.text-title {
+  width: 60%;
+  height: 90rpx;
+  font-size: 32rpx;
+  font-weight: 700;
+  margin-left: 16rpx;
+  word-wrap: break-word;
+  align-items: center;
+  display: flex;
+}
+
+.text-teacher {
+  width: 60%;
+  height: 90rpx;
+  font-size: 28rpx;
+  margin-left: 16rpx;
+  word-wrap: break-word;
+  align-items: center;
+  display: flex;
+}
+
+/* 课程目录*/
+.category-textactive{
+  color:#23889a !important;
+}
+
+
+/* 评论底部*/
+
+.com_class {
+  padding: 0 25rpx;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+textarea {
+  width: 580rpx;
+  padding: 20rpx 0;
+}
+
+.com_btn {
+  display: flex;
+  border: solid 2rpx #23889a;
+  text-align: center;
+  padding: 15rpx 14rpx;
+  color: #23889a;
+  margin: 0 10rpx 0 14rpx;
+  font-size: 30rpx;
+  border-radius: 2rpx;
+}
+
+.hover_com_btn{
+  
+  background:#D3D3D3;
+}
+.avatarImg {
+  
+  width: 74rpx;
+  height: 74rpx;
+  border-radius: 50%;
+}
+
+.com_img {
+  display: flex;
+  flex-direction: row;
+  padding: 10rpx 16rpx;
+}
+
+.com_area {
+  padding: 0 20rpx;
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 596rpx;
+}
+
+.com_nikename {
+  width: 50%;
+  display: flex;
+  font-weight: 700;
+}
+
+.com_time {
+  display: flex;
+  padding: 0 10rpx;
+  width: 25%;
+  color:grey ;
+  
+}
+.com_text{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.com_content {
+  display: flex;
+  width: 510rpx;
+  margin-left: 90rpx;
+  padding: 4rpx 16rpx 10rpx 16rpx;
+}
+.com_del{
+  color: #23889a;
+  padding: 16rpx;
+  display: flex;
+  text-align: center;
+}
+
+/*评论为空*/
+.none_study{
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+.none_study image{
+  width: 128rpx;
+  height: 128rpx;
+  margin-top: 20rpx;
+}

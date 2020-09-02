@@ -1,0 +1,64 @@
+/* 课程列表 */
+
+.course-item {
+  display: flex;
+  flex-wrap: wrap;
+  background-color: #fff;
+  /* border-bottom: 1rpx gray solid; */
+}
+
+.course-img {
+  width: 45%;
+  height: 220rpx;
+  margin: 16rpx 20rpx 16rpx 16rpx;
+}
+
+.course-img image {
+  width: 100%;
+  height: 220rpx;
+  border-radius: 8rpx;
+}
+
+.course-content {
+  flex-direction: column;
+  margin-top: 20rpx;
+  margin-bottom: 20rpx;
+  flex: 1; /*  可换行 */
+  margin-right: 16rpx;
+}
+
+.course-content image {
+  width: 50rpx;
+  height: 50rpx;
+}
+
+.text-title {
+  font-size: 30rpx;
+  font-weight: 700;
+  height: 30%;
+}
+
+.text-title, .text-desc {
+  align-items: center;
+  display: flex;
+  word-wrap: break-word;
+  line-height: 16px;
+}
+
+.text-desc {
+  font-size: 28rpx;
+  color: #646566;
+  height: 33%;
+}
+
+.text-img {
+  height: 30%;
+  align-items: center;
+  display: flex;
+}
+
+.text-img text {
+  font-size: 28rpx;
+  color: #646566;
+  padding-left: 8rpx;
+}

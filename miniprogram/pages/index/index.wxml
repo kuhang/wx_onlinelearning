@@ -1,0 +1,42 @@
+<view>
+	<block wx:if="{{userInfo != null}}">
+		<view class="bg-view">
+			<image class="avatarImg" src="{{userInfo.avatarUrl}}"></image>
+			<view class="avatarText">{{userInfo.nickName}}</view>
+		</view>
+	</block>
+	<block wx:else>
+		<view class="bg-view">
+			<image class="avatarImg" src="{{userPhoto}}"></image>
+			<button bindtap="bindGetUserInfo">点击登录</button>
+		</view>
+	</block>
+
+	<view style="height:6rpx;margin:6rpx 0;"></view>
+	<van-cell-group>
+		<van-cell title-class="my_title" size="large" is-link title="我的学习" link-type="switchTab" url="/pages/mystudy/mystudy">
+			<van-icon slot="icon" name="column" color="#008080" size="20px" />
+		</van-cell>
+
+		<van-cell title-class="my_title" size="large" is-link title="我的收藏" link-type="navigateTo" url="/pages/mylike/mylike">
+			<van-icon slot="icon" name="like" color="red" size="20px" />
+		</van-cell>
+
+		<van-cell title-class="my_title" size="large" is-link title="联系作者" bind:click="showWecode">
+			<van-icon slot="icon" name="smile-comment" color="#2E8B57" size="20px" />
+		</van-cell>
+
+
+
+		<van-cell title-class="my_title" size="large" is-link>
+			<button slot="title" class="back_btn" open-type="feedback">
+				<text class="back_text">建议反馈</text>
+			</button>
+			<van-icon slot="icon" name="comment" color="#00BFFF" size="20px" />
+		</van-cell>
+
+	</van-cell-group>
+
+
+
+</view>

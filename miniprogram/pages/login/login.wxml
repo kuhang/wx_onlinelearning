@@ -1,0 +1,8 @@
+<view class="login">
+
+	<van-icon name="info" size="156rpx" color="#23889a" style="margin-top:200rpx;" />
+
+	<view class="tip">您尚未登录</view>
+
+	<button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo" size="default">微信授权登录</button>
+</view>

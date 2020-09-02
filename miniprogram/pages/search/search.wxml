@@ -1,0 +1,56 @@
+<van-search 
+focus
+value="{{ value }}" 
+placeholder="请输入搜索关键词" 
+use-action-slot 
+bind:change="onChange" 
+bind:search="onSearch">
+<view slot="action" bind:tap="onClick">搜索</view>
+</van-search>
+
+<block wx:if="{{showhis==1}}">
+<view  class="search_history">
+<text>历史记录</text>
+<text bindtap="delHistory" style="color:#23889a">清空记录</text>
+</view>
+<view class="search_content" >
+<text wx:for="{{historyList}}" wx:key="index"  bindtap="hisSearch" data-value="{{item}}">{{item}}</text>
+</view>
+</block>
+
+<block wx:if="{{courseList.length == 0}}">
+	<view class="none_study">
+		<image src="../../images/image/nostudy.png"></image>
+		<view>非常抱歉，暂时没有该关键字的相关内容</view>
+		<view>换个关键词再试试</view>
+	</view>
+</block>
+
+<block wx:else>
+<block wx:for="{{courseList}}" wx:for-item="courseList" wx:key="index">
+	<navigator url="/pages/detail/detail?id={{courseList.cid}}">
+		<view class="course-item">
+			<view class="course-img">
+				<image src="{{courseList.course_intro.imgSrc}}"></image>
+			</view>
+
+			<view class="course-content">
+				<view class="text-title">
+					{{courseList.course_intro.title}}
+				</view>
+				<view class="text-desc">
+					讲师：{{courseList.course_intro.teacher}}
+				</view>
+
+				<view class="text-img">
+					<van-icon name="contact" color="#646566" />
+					<text>{{courseList.course_intro.count}}人最近学习</text>
+				</view>
+			</view>
+		</view>
+	</navigator>
+	<van-divider />
+</block>
+</block>
+
+<!-- <van-divider contentPosition="center" dashed customStyle="color: #23889a;border-color: #23889a;font-size: 28rpx;">这是我的底线</van-divider> -->

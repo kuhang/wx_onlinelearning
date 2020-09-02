@@ -1,0 +1,94 @@
+/* 课程列表 */
+
+.my_title{
+  margin-left: 10rpx !important;
+}
+
+.course-item {
+  display: flex;
+  flex-wrap: wrap;
+  background-color: #fff;
+  /* border-bottom: 1rpx gray solid; */
+}
+
+.course-img {
+  width: 45%;
+  height: 220rpx;
+  margin: 16rpx 20rpx 16rpx 16rpx;
+}
+
+.course-img image {
+  width: 100%;
+  height: 220rpx;
+  border-radius: 8rpx;
+}
+
+.course-content {
+  flex-direction: column;
+  margin-top: 20rpx;
+  margin-bottom: 20rpx;
+  flex: 1; /*  可换行 */
+  margin-right: 16rpx;
+}
+
+.course-content image {
+  width: 50rpx;
+  height: 50rpx;
+}
+
+.text-title {
+  font-size: 30rpx;
+  font-weight: 700;
+  height: 30%;
+}
+
+.text-title, .text-desc {
+  align-items: center;
+  display: flex;
+  word-wrap: break-word;
+  line-height: 16px;
+}
+
+.text-desc {
+  font-size: 28rpx;
+  color: #646566;
+  height: 30%;
+}
+
+.studyBtn{
+  height: 30%;
+  align-items: center;
+  text-align: center;
+  display: flex;
+  margin-top: 4rpx;
+}
+
+/* 内容为空时*/
+.none_study{
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+.none_study image{
+  width: 128px;
+  height: 128px;
+  margin-top: 100rpx;
+}
+/*删除按钮*/
+.del-view{
+  width: 65px;
+  display: flex;
+  height: 118px;
+  background-color: #CC3300;
+  align-items: center;
+  
+}
+
+.del-text{
+  width: 100%;
+  display: flex;
+  text-align: center;
+  margin-left: 18px;
+  font-size: 34rpx;
+  color: #fff;
+}

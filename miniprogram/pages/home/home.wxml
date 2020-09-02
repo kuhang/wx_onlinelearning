@@ -1,0 +1,45 @@
+<view class="body1">
+  <!-- 搜索模块-->
+  <view class="search-block">
+    <navigator class="input" openType="navigate" url="/pages/search/search">
+      搜索</navigator>
+  </view>
+
+  <!-- 轮播模块-->
+  <view class="swiper-block">
+    <swiper indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" circular="{{circular}}"  >
+      <block wx:for="{{swiperImg}}" wx:key="_id">
+        <swiper-item class="swiper-list">
+          <image class="slide-image" src="{{item.swiperSrc}}" ></image>
+        </swiper-item>
+      </block>
+    </swiper>
+  </view>
+
+  <!-- 分类导航 -->
+  <view>
+  <van-grid clickable="true" column-num="4" border="{{ false }}">
+    <van-grid-item use-slot wx:for="{{navItem}}" wx:for-item="navItem" wx:key="_id" link-type="navigateTo" url="{{navItem.imgTo}}">
+      <image style="width: 100rpx; height: 100rpx;" src="{{navItem.imgSrc}}"></image>
+      <text class="imginfo">{{navItem.title}}</text>
+    </van-grid-item>
+  </van-grid>
+</view>
+
+  <!-- 推荐课程-->
+  <view class="good-lesson">
+    <view class="good-text">
+      <image src="../../images/image/vip.png"></image>
+      <text>课程推荐</text>
+    </view>
+    <view>
+      <van-grid clickable="true" column-num="2" border="{{ true }}">
+        <van-grid-item class="grid-item" use-slot wx:for="{{ goodIntro}}" wx:for-item="goodIntro" wx:key="index"  bind:click="goDetail" data-id ="{{goodIntro.cid}}"> 
+          <image class="good-img" src="{{goodIntro.course_intro.imgSrc}}"></image>
+          <view class="imginfo">{{goodIntro.course_intro.title}}</view>
+        </van-grid-item>
+      </van-grid>
+    </view>
+  </view>
+
+</view>

@@ -1,0 +1,38 @@
+<block wx:if="{{courseInfo.length>0}}">
+	<van-cell title-class="my_title" size="large" title="我的收藏">
+		<van-icon slot="icon" name="like" color="red" size="20px" />
+	</van-cell>
+
+	<block wx:for="{{courseInfo}}" wx:for-item="courseInfo" wx:key="index">
+		<view>
+			<!--/pages/sqlpage/sqlpage?id={{courseInfo.cid}}-->
+			<view class="course-item">
+				<view class="course-img">
+					<image src="{{courseInfo.imgSrc}}"></image>
+				</view>
+
+				<view class="course-content">
+					<view class="text-title">
+						{{courseInfo.title}}
+					</view>
+					<view class="text-desc">
+						讲师：{{courseInfo.teacher}}
+					</view>
+
+					<button class="studyBtn" type="primary" size="mini" bindtap="goStudy" data-id="{{courseInfo.cid}}">继续学习</button>
+
+				</view>
+			</view>
+		</view>
+		<van-divider />
+	</block>
+
+</block>
+
+<block wx:else>
+	<view class="none_like">
+		<image src="../../images/image/nolike.png"></image>
+		<view>您没有收藏的内容，快去添加好课吧</view>
+	</view>
+</block>
+

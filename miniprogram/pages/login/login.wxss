@@ -1,0 +1,33 @@
+/* miniprogram/pages/login/login.wxss */
+page {
+  background-color: #ffffff;
+}
+
+.login {
+  height: 60%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.login button {
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: auto;
+}
+
+.login button {
+  top: 560rpx;
+  width: 70%;
+  background: #23889a;
+  /*#2CC17B */
+  color: #ffffff
+}
+
+.login .tip {
+  
+font-weight: 600;
+  font-size: 26rpx;
+  margin-top: 20rpx;
+}

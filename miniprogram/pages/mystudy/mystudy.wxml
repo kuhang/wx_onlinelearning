@@ -1,0 +1,51 @@
+<block wx:if="{{courseInfo.length==0}}">
+	<view class="none_study">
+		<image src="../../images/image/nostudy.png"></image>
+		<view>您没有添加学习的内容，快去学习吧</view>
+	</view>
+</block>
+
+<block wx:else>
+
+
+	<van-cell title-class="my_title" size="large" title="我的学习">
+		<van-icon slot="icon" name="column" color="#008080" size="20px" />
+	</van-cell>
+
+	<block wx:for="{{courseInfo}}" wx:for-item="courseInfo" wx:key="index">
+<!--侧栏删除-->
+		<van-dialog id="van-dialog" />
+		<van-swipe-cell id="swipe-cell" right-width="{{ 65 }}" async-close bind:close="onClose" data-index = "{{courseInfo}}">
+			<view slot="right" class="del-view">
+			<view class="del-text">删除</view>
+			</view>
+
+			<view>
+				<view class="course-item">
+					<view class="course-img">
+						<image src="{{courseInfo.imgSrc}}"></image>
+					</view>
+
+					<view class="course-content">
+						<view class="text-title">
+							{{courseInfo.title}}
+						</view>
+						<view class="text-desc">
+							讲师：{{courseInfo.teacher}}
+						</view>
+
+						<!-- <view class="text-img">
+					<van-icon name="contact" color="#646566" />
+					<text>{{courseList.course_intro.count}}人最近学习</text>
+				</view> -->
+						<button class="studyBtn" type="primary" size="mini" bindtap="goStudy" data-id="{{courseInfo.cid}}">继续学习</button>
+
+					</view>
+				</view>
+			</view>
+			<van-divider />
+			<!--删除-->
+		</van-swipe-cell>
+	</block>
+
+</block>

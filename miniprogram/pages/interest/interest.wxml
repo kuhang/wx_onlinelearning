@@ -1,0 +1,25 @@
+<block wx:for="{{courseList}}" wx:for-item="courseList" wx:key="index">
+	<navigator url="/pages/detail/detail?id={{courseList.cid}}">
+		<view class="course-item">
+			<view class="course-img">
+				<image src="{{courseList.course_intro.imgSrc}}"></image>
+			</view>
+
+			<view class="course-content">
+				<view class="text-title">
+					{{courseList.course_intro.title}}
+				</view>
+				<view class="text-desc">
+					讲师：{{courseList.course_intro.teacher}}
+				</view>
+
+				<view class="text-img">
+					<van-icon name="contact" color="#646566" />
+					<text>{{courseList.course_intro.count}}人最近学习</text>
+				</view>
+			</view>
+		</view>
+	</navigator>
+	<van-divider />
+</block>
+<van-divider contentPosition="center" dashed customStyle="color: #23889a;border-color: #23889a;font-size: 28rpx;">没有更多数据了</van-divider>

@@ -1,0 +1,73 @@
+{
+  "pages": [
+    "pages/home/home",
+    "pages/index/index",
+    "pages/program/program",
+    "pages/english/english",
+    "pages/interest/interest",
+    "pages/ideology/ideology",
+    "pages/login/login",
+    "pages/detail/detail",
+    "pages/mystudy/mystudy",
+    "pages/search/search",
+    "pages/mylike/mylike"
+  ],
+  "window": {
+    "backgroundColor": "#F6F6F6",
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#23889A",
+    "navigationBarTitleText": "微学堂",
+    "navigationBarTextStyle": "white",
+    "enablePullDownRefresh": true
+  },
+  
+  "tabBar": {
+    "selectedColor": "#23889a",
+    "list": [
+      {
+        "pagePath": "pages/home/home",
+        "text": "首页",
+        "iconPath": "images/tabbar/index1.png",
+        "selectedIconPath": "images/tabbar/index2.png"
+       
+      },
+     
+      {
+        "pagePath": "pages/mystudy/mystudy",
+        "text": "学习",
+        "iconPath": "images/tabbar/study1.png",
+        "selectedIconPath": "images/tabbar/study2.png"
+      },
+      {
+        "pagePath": "pages/index/index",
+        "text": "我的",
+        "iconPath": "images/tabbar/user1.png",
+        "selectedIconPath": "images/tabbar/user2.png"
+      }
+    ]
+  },
+  "sitemapLocation": "sitemap.json",
+  "usingComponents": {
+    "van-button": "@vant/weapp/button",
+    "van-image": "@vant/weapp/image",
+    "van-card": "@vant/weapp/card",
+    "van-cell": "@vant/weapp/cell",
+    "van-cell-group": "@vant/weapp/cell-group",
+    "van-icon": "@vant/weapp/icon",
+    "van-divider": "@vant/weapp/divider",
+    "van-collapse": "@vant/weapp/collapse",
+    "van-collapse-item": "@vant/weapp/collapse-item",
+    "van-submit-bar": "@vant/weapp/submit-bar",
+    "van-goods-action": "@vant/weapp/goods-action",
+  "van-goods-action-icon": "@vant/weapp/goods-action-icon",
+    "van-goods-action-button": "@vant/weapp/goods-action-button",
+    "van-search": "@vant/weapp/search",
+    "van-swipe-cell": "@vant/weapp/swipe-cell",
+    "van-dialog": "@vant/weapp/dialog",
+    "van-tab": "@vant/weapp/tab/",
+    "van-tabs": "@vant/weapp/tabs",
+    "van-tag": "@vant/weapp/tag"
+
+ 
+  }
+}

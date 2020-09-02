@@ -1,0 +1,157 @@
+<view>
+	<!--详情页视频框-->
+	<view wx:if="{{cateStatues=='-1'}}">
+		<image class="video-img" src="{{courseInfo.imgSrc}}"></image>
+	</view>
+	<view wx:else>
+		<video class="course-video" src="{{videoSrc}}" enable-play-gesture="true" bindended="playEnd" binderror="playErr"></video>
+	</view>
+
+	<!-- 课程信息-->
+	<view class="course-detail">
+
+		<view class="v1">
+			<view class="text-title">
+				{{courseDetail.course_intro.title}}
+			</view>
+
+			<view class="v-icon">
+
+				<image class="v-img1" src="{{likeimgSrc}}" bindtap="clickLike"></image>
+				<text class="liketext">{{likeText}}</text>
+				<button class="btn" open-type="share" hover-class="hover_btn">
+					<image class='btnImg' src='../../images/share.png'></image>
+					<view class="btnText">分享</view>
+				</button>
+			</view>
+		</view>
+
+
+		<view class="v1">
+			<view class="text-teacher">
+				讲师：{{courseDetail.course_intro.teacher}}
+			</view>
+
+			<view class="v-icon">
+				<van-icon name="contact" size="38rpx" />
+				<text>{{count}}人最近学习</text>
+			</view>
+		</view>
+
+	</view> <!-- class="course-detail"结束-->
+
+	<!--课程介绍-->
+
+	<van-tabs color="#23889a" animated bind:click='getCom'>
+		<van-tab title="详情">
+
+
+
+
+
+			<van-collapse value="{{ activeName }}" bind:change="onChange" accordion>
+				<van-collapse-item title="课程简介" name="1" value="折叠">
+					{{courseDetail.course_intro.desc}}
+				</van-collapse-item>
+				<van-collapse-item title="课程目录" name="2" value="折叠">
+
+
+					<scroll-view scroll-y="true" style="height:360rpx;width:100%;">
+						<block wx:for="{{courseDetail.video_list}}" wx:key="index">
+							<view hover-class="hover_cate_class">
+								<van-cell is-link data-index="{{index}}" title-class="category-text{{ cateStatues == index ?'active':''}}" title="{{index+1}}.{{item.text}}" link-type="navigateTo" url="" bind:click="selectVideo">
+									<block wx:if="{{endList.cateid==index }}">
+										<van-tag plain size="medium" type="success">已完成</van-tag>
+									</block>
+								</van-cell>
+							</view>
+						</block>
+					</scroll-view>
+
+				</van-collapse-item> <!-- name=2-->
+
+				<van-collapse-item title="课程资料" name="3" value="折叠">
+
+					<block wx:if="{{courseInfo.res.length > 0}}">
+					<scroll-view scroll-y="true" style="height:320rpx;width:100%;">
+						<block wx:for="{{courseInfo.res}}" wx:key="index">
+							<van-cell is-link data-res="{{item.resourse}}" title-class="category-text{{ cateStatues == index ?'active':''}}" title="{{index+1}}.{{item.text}}" link-type="navigateTo" bind:click="downRes" />
+						</block>
+						</scroll-view>
+					</block>
+					<block wx:else>
+						<view>本课程没有课件</view>
+					</block>
+				</van-collapse-item>
+			</van-collapse>
+
+
+		</van-tab>
+		<van-tab title="评论">
+
+			<!-- 评论部分-->
+			<view style="background-color: #fff; ">
+
+				<view class="com_class">
+					<textarea value="{{value}}" style="height: 3em" placeholder="说点什么..." bindinput="getInput" cursor-spacing="24"></textarea>
+					<view class="com_btn" bindtap="sentBtn" hover-class="hover_com_btn">发表</view>
+				</view>
+			</view>
+
+			<view style="height:10rpx"></view>
+
+
+			<scroll-view scroll-y="true" style="height:410rpx;width:100%; ">
+				<block wx:if="{{comList.length==0}}">
+					<view class="none_study">
+						<image src="../../images/image/nostudy.png"></image>
+						<view>暂无评论</view>
+					</view>
+				</block>
+				<block wx:else>
+
+					<block wx:for="{{comList}}" wx:key="index" wx:for-item="comList">
+						<view style="background-color: #fff;">
+							<view class="com_img">
+								<image class="avatarImg" src="{{comList.avatarUrl}}"></image>
+
+								<view class="com_area">
+									<view class="com_nikename">
+										{{comList.nickName}}
+									</view>
+									<view class="com_time">{{comList.comTime}}</view>
+								</view>
+							</view>
+							<view class="com_text">
+								<view class="com_content">{{comList.comContent}}</view>
+								<block wx:if="{{comList._openid == userInfo.openid}}">
+									<view class="com_del" bindtap="delCom" data-id='{{comList._id}}'>删除</view>
+								</block>
+								<block wx:else>
+
+								</block>
+							</view>
+						</view>
+						<view style="height:10rpx"></view>
+					</block>
+
+				</block>
+			</scroll-view>
+		</van-tab>
+
+	</van-tabs>
+	<!--tab结束-->
+	<!--底部按钮-->
+
+
+	<block wx:if="{{status==0}}">
+		<van-goods-action>
+			<van-goods-action-button square size="large" color="linear-gradient(to right, #4bb0ff,#23889a )" text="添加学习" bind:click="addStudy" />
+		</van-goods-action>
+	</block>
+
+	<block wx:else>
+		<view style="height:2rpx;"></view>
+	</block>
+
+</view>

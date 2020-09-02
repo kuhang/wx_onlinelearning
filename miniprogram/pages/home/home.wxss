@@ -1,0 +1,108 @@
+page {
+  display: block;
+  min-height: 100%;
+  background: #F5F5F5	;
+}
+
+
+
+/* .search-block*/
+
+.search-block {
+  /* margin: 0 auto 15rpx;*/
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 18rpx;
+  padding-bottom: 18rpx;
+  background-color: #23889a;
+}
+
+.search-block .input {
+  width: 590rpx;
+  height: 70rpx;
+  line-height: 70rpx;
+  padding: 0 60rpx;
+  background: #fff url('https://7465-test-20-1301342246.tcb.qcloud.la/images/search.png?sign=d7b576ede9f44e997551f1a79295d957&t=1585898429') 20rpx center no-repeat; /* 20rpx,距离左侧的距离*/
+  background-size: 36rpx 36rpx; /* 设置背景图片（搜索）大小*/
+  border-radius: 26rpx;
+  font-size: 28rpx;
+ color: #888	;  
+  font-weight: 300;
+}
+
+/* .swiper-block*/
+
+
+swiper {
+  height: 354rpx;
+  background-color: #ffffff;
+}
+
+.swiper-list{
+  display: flex;   /* 可保持前后端露出相同距离*/
+}
+
+.slide-image{
+  width: 100%;
+  height: 354rpx;
+}
+
+/*开启 底部 滚动条*/
+
+page .wx-swiper-dots.wx-swiper-dots-horizontal {
+  margin-bottom: -2rpx;
+}
+
+/*默认滚动条属性   flex-grow: 1;*/
+
+page .wx-swiper-dot::before {
+  content: '';
+  background: #e5e5e5;
+}
+
+/*选择时的滚动条属性  flex-grow: 3;*/
+
+page .wx-swiper-dot-active {
+  background: #23889a;
+}
+
+/*
+* 分类导航-->
+*/
+.imginfo{
+  font-size: 30rpx;
+  font-family: '微软雅黑';
+  padding-top: 10rpx;
+  height: 68rpx;
+}
+
+/*推荐课程*/
+.good-lesson{
+  margin-top: 10rpx;
+  
+}
+.good-text{
+  display: flex;
+  margin-top: 10rpx;
+  background-color: #fff;
+  padding: 18rpx ;
+align-items: center;
+}
+.good-text image{
+  width: 45rpx;
+  height: 45rpx;
+
+}
+.good-text text{
+  margin-left: 10rpx;
+  font-size: 17px;
+  font-family: "微软雅黑";
+}
+.good-img{
+ width:100%;
+ height: 220rpx;
+ border-radius: 8rpx;
+}
+
+
