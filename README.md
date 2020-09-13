@@ -10,10 +10,10 @@ wx_onlinelearning based on mini programe
 （3）搭建和部署云开发环境，运用微信小程序云开发技术编码实现满足功能需求的在线学习微平台。
 （4）根据系统的设计目标，完成对系统的测试。
 (四)效果图
-![Image text](https://github.com/kuhang/wx_onlinelearning/blob/master/picture/1.jpg)
-![Image text](https://github.com/kuhang/wx_onlinelearning/blob/master/picture/2.jpg)
-![Image text](https://github.com/kuhang/wx_onlinelearning/blob/master/picture/3.jpg)
-![Image text](https://github.com/kuhang/wx_onlinelearning/blob/master/picture/4.jpg)
-![Image text](https://github.com/kuhang/wx_onlinelearning/blob/master/picture/5.jpg)
+![图片1](https://github.com/kuhang/wx_onlinelearning/blob/master/picture/1.jpg?raw=true)
+![图片2](https://github.com/kuhang/wx_onlinelearning/blob/master/picture/2.jpg?raw=true)
+![图片3](https://github.com/kuhang/wx_onlinelearning/blob/master/picture/3.jpg?raw=true)
+![图片4](https://github.com/kuhang/wx_onlinelearning/blob/master/picture/4.jpg?raw=true)
+![图片5](https://github.com/kuhang/wx_onlinelearning/blob/master/picture/5.jpg?raw=true)
 
 注:小程序中使用到的课程视频来自网络,仅仅做测试使用,没有用于商业用途.
